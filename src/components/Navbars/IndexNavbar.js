@@ -62,7 +62,7 @@ function IndexNavbar() {
     };
   });
   return (
-    <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
+    <Navbar style={{backgroundColor: '#f1f1f1'}} className={classnames("fixed-top")} expand="lg">
       <Container>
         <div className="navbar-translate">
           <NavbarBrand
@@ -71,7 +71,7 @@ function IndexNavbar() {
             target="_blank"
             title="Coded by Creative Tim"
           >
-            Paper Kit React
+            Haiconmeo
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -142,16 +142,6 @@ function IndexNavbar() {
               >
                 <i className="nc-icon nc-book-bookmark" /> Documentation
               </NavLink>
-            </NavItem>
-            <NavItem>
-              <Button
-                className="btn-round"
-                color="danger"
-                href="https://www.creative-tim.com/product/paper-kit-pro-react?ref=pkr-index-navbar"
-                target="_blank"
-              >
-                <i className="nc-icon nc-spaceship"></i> Upgrade to Pro
-              </Button>
             </NavItem>
           </Nav>
         </Collapse>

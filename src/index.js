@@ -30,13 +30,13 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
-import Hone from "views/App.js"
+import App from "views/App.js"
 // others
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/" render={(props) => <Hone {...props} />} />0
+      <Route path="/" render={(props) => <App  />} />0
       <Route
         path="/nucleo-icons"
         render={(props) => <NucleoIcons {...props} />}
