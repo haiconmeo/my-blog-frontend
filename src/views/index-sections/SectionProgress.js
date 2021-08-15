@@ -38,6 +38,7 @@ import {
 
 function SectionProgress() {
   const [activeTab, setActiveTab] = React.useState("1");
+  const [index, setindex] = React.useState(1);
   const toggle = (tab) => {
     if (activeTab !== tab) {
       setActiveTab(tab);
@@ -53,13 +54,22 @@ function SectionProgress() {
               <br />
               <nav aria-label="...">
                 <Pagination>
+                <PaginationItem>
+                    <PaginationLink
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                      tabIndex="-1"
+                    >
+                      &laquo;
+                    </PaginationLink>
+                  </PaginationItem>
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                       tabIndex="-1"
                     >
-                      Previous
+                      &lt;
                     </PaginationLink>
                   </PaginationItem>
                   <PaginationItem>
@@ -78,7 +88,7 @@ function SectionProgress() {
                       2
                     </PaginationLink>
                   </PaginationItem>
-                  <PaginationItem className="active">
+                  <PaginationItem>
                     <PaginationLink
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
@@ -107,7 +117,15 @@ function SectionProgress() {
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                      Next
+                      &gt;
+                    </PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      &raquo;
                     </PaginationLink>
                   </PaginationItem>
                 </Pagination>

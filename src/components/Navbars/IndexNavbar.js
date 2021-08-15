@@ -21,7 +21,7 @@ import React from "react";
 import classnames from "classnames";
 // reactstrap components
 import {
-  Button,
+  // Button,
   Collapse,
   NavbarBrand,
   Navbar,
@@ -62,13 +62,12 @@ function IndexNavbar() {
     };
   });
   return (
-    <Navbar style={{backgroundColor: '#f1f1f1'}} className={classnames("fixed-top")} expand="lg">
+    <Navbar style={{ backgroundColor: '#f1f1f1' }} className={classnames("fixed-top")} expand="lg">
       <Container>
         <div className="navbar-translate">
           <NavbarBrand
             data-placement="bottom"
             href="/index"
-            target="_blank"
             title="Coded by Creative Tim"
           >
             Haiconmeo
@@ -105,7 +104,7 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                href="https://www.facebook.com/Fateri45"
                 target="_blank"
                 title="Like us on Facebook"
               >
@@ -127,7 +126,7 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.github.com/CreativeTimOfficial/paper-kit-react?ref=creativetim"
+                href="https://github.com/hoanghuumanh"
                 target="_blank"
                 title="Star on GitHub"
               >
