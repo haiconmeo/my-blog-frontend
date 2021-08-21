@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React,{ Suspense } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 
@@ -25,36 +25,25 @@ import "bootstrap/scss/bootstrap.scss";
 import "assets/scss/paper-kit.scss?v=1.3.0";
 import "assets/demo/demo.css?v=1.3.0";
 // pages
-import Index from "views/Index.js";
-import NucleoIcons from "views/NucleoIcons.js";
-import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
-import RegisterPage from "views/examples/RegisterPage.js";
 import App from "views/App.js"
-// others
-
+import PostDetails from "./components/Content/postDetails.js"
 ReactDOM.render(
-  <BrowserRouter>
+
+    <Suspense fallback={<>wait a minute</>}>
+    <BrowserRouter>
     <Switch>
-      <Route path="/" render={(props) => <App  />} />0
-      <Route
-        path="/nucleo-icons"
-        render={(props) => <NucleoIcons {...props} />}
-      />
-      <Route
-        path="/landing-page"
-        render={(props) => <LandingPage {...props} />}
-      />
-      <Route
-        path="/profile-page"
-        render={(props) => <ProfilePage {...props} />}
-      />
-      <Route
-        path="/register-page"
-        render={(props) => <RegisterPage {...props} />}
-      />
-      <Redirect to="/index" />
+      {/* add routes with layouts */}
+      
+      <Route path="/index" exact component={App} />
+      <Route path="/docs/:id" exact component={PostDetails} />
+      <Route path="/aboutme" exact component={ProfilePage} />
+      {/* add redirect for first page */}
+      <Redirect from="*" to="/index" />
     </Switch>
-  </BrowserRouter>,
+  </BrowserRouter>
+    </Suspense>
+
+  ,
   document.getElementById("root")
 );
