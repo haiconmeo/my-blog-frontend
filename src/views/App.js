@@ -48,7 +48,8 @@ const App = () => {
       <LandingPageHeader />
       <div className="section">
         <Row>
-          <Col md="9">
+        <Col md="2"></Col>
+          <Col md="7">
             <div><h2><b>NỔI BẬT</b></h2></div>
             {listTeam.map(dt => (
               <Link to={`/docs/${dt.docs}`}>

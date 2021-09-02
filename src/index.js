@@ -28,6 +28,7 @@ import "assets/demo/demo.css?v=1.3.0";
 import ProfilePage from "views/examples/ProfilePage.js";
 import App from "views/App.js"
 import PostDetails from "./components/Content/postDetails.js"
+import test from './components/Content/test.js'
 ReactDOM.render(
 
     <Suspense fallback={<>wait a minute</>}>
@@ -38,7 +39,6 @@ ReactDOM.render(
       <Route path="/index" exact component={App} />
       <Route path="/docs/:id" exact component={PostDetails} />
       <Route path="/aboutme" exact component={ProfilePage} />
-      {/* add redirect for first page */}
       <Redirect from="*" to="/index" />
     </Switch>
   </BrowserRouter>
