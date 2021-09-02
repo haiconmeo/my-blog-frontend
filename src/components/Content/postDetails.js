@@ -1,9 +1,12 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactMarkdown from "react-markdown";
 import IndexNavbar from "../Navbars/IndexNavbar";
+import DemoFooter from "components/Footers/DemoFooter.js";
 import { Row, Col } from 'reactstrap';
 import axios from "axios";
-import remarkGfm from 'remark-gfm'
+import gfm from 'remark-gfm'
+import CodeBlock from "./code-block"
+import style from '../../assets/css/markdown-styles.module.css';
 const PostDetails = (props) => {
     const [post, setpost] = useState([]);
     console.log("id",props.match.params.id)
@@ -32,17 +35,19 @@ const PostDetails = (props) => {
         <div >
             <IndexNavbar />
 
-            <div className="section">
+            <div className="section"  style={{backgroundColor:"#131127"}} >
             <Row>
             <Col md="2">
             </Col>
             <Col md="7">
-            <ReactMarkdown children={post} remarkPlugins={[remarkGfm]} />
+            <ReactMarkdown  className={style.reactMarkDown} children={post} renderers={{
+        code: CodeBlock,
+      }}  remarkPlugins={[gfm]} />
             </Col>
             </Row>
             
             </div>
-            
+            <DemoFooter />
         </div>
     );
 

@@ -1,0 +1,17 @@
+html {
+    --theme-ui-colors-text: #FFFFFF;
+    --theme-ui-colors-background: #131127;
+    --theme-ui-colors-muted: #8b87ea;
+    --theme-ui-colors-highlight: #ffeb3b;
+    --theme-ui-colors-surface: #232140;
+    --theme-ui-colors-primary: #f056c7;
+    --theme-ui-colors-secondary: #c39eff;
+    --theme-ui-colors-success: #58e6d9;
+    --theme-ui-colors-error: #ff4343;
+    --theme-ui-colors-black: #000000;
+    --theme-ui-colors-warning: #fdd835;
+    --theme-ui-colors-placeholder: #4e4b85;
+    color: var(--theme-ui-colors-text);
+    background-color: var(--theme-ui-colors-background);
+    font-family: monospace;
+}
