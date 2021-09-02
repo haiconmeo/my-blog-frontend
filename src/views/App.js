@@ -8,6 +8,7 @@ import SectionProgress from "../views/index-sections/SectionProgress.js";
 import CountView from "../views/index-sections/countView.js"
 import axios from "axios";
 import PostDetails from "../components/Content/postDetails";
+
 import { Link } from "react-router-dom";
 const App = () => {
   document.documentElement.classList.remove("nav-open");
@@ -43,25 +44,26 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div >
       <IndexNavbar />
-      <LandingPageHeader />
-      <div className="section">
-        <Row>
+      {/* <LandingPageHeader /> */}
+      <div className="section" >
+        <Row style={{backgroundColor:"#131127"}}>
         <Col md="2"></Col>
           <Col md="7">
-            <div><h2><b>NỔI BẬT</b></h2></div>
+            <div><h2><b style={{color:"#c39eff"}}>NỔI BẬT</b></h2></div>
             {listTeam.map(dt => (
               <Link to={`/docs/${dt.docs}`}>
                 <PostView data={dt} />
                 </Link>
 
             ))}
-            <SectionProgress />
+            {/* <SectionProgress /> */}
           </Col>
           <Col md="3">
-            <CountView />
-            <p>Bài viết mới</p>
+            {/* <CountView /> */}
+            <div><h2><b style={{color:"#c39eff"}}>Bài viết mới</b></h2></div>
+            {/* <p style={{fontFamily:"font-family: 'Inconsolata', monospace;"}}>Bài viết mới</p> */}
 
           </Col>
         </Row>
