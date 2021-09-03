@@ -32,12 +32,12 @@ const PostView = (props) => {
 
             ))} */}
         {data.tag.map(dt => (
-          // <Link to={`/tag/${dt}`} onClick={() => window.location.reload(`/tag/${dt}`)}>
+          
           <a  onClick={() => {window.location.href=`/tag/${dt}`}} className={style.button}> {dt} </a>
-          // </Link>
+          
           ))}
 
-        <p style={{fontFamily:"'Inconsolata', monospace",color:"#ffffff"}}>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+        <p style={{fontFamily:"'Inconsolata', monospace",color:"#ffffff"}}>{data.introduction}</p>
         <br/>
         <Link to={`/docs/${data.docs}`}>
         <Button outline color="secondary"  style={{borderColor:"#a47ae1"}}>Xem thêm &gt;&gt;</Button>

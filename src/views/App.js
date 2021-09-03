@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PostView from '../components/Content/postView';
+import PostNew from '../components/Content/postNew';
 import DemoFooter from "components/Footers/DemoFooter.js";
 import { Row, Col } from 'reactstrap';
 import IndexNavbar from "../components/Navbars/IndexNavbar";
@@ -43,23 +44,28 @@ const App = () => {
     <div >
       <IndexNavbar />
       {/* <LandingPageHeader /> */}
-      <div className="section"  style={{backgroundColor:"#131127"}} >
+      <div className="section" style={{ backgroundColor: "#131127" }} >
         <Row>
-        <Col md="2"></Col>
-          <Col md="7">
-            <div><h2><b style={{color:"#c39eff"}}>NỔI BẬT</b></h2></div>
+          <Col md="2"></Col>
+          <Col md="7" style={{marginLeft:"20px"}}>
+            <div><h2><b style={{ color: "#c39eff" }}>NỔI BẬT</b></h2></div>
             {listTeam.map(dt => (
-              // <Link to={`/docs/${dt.docs}`}>
-                <PostView data={dt} />
-                // </Link>
+
+              <PostView data={dt} />
+
 
             ))}
-            {/* <SectionProgress /> */}
+
           </Col>
-          <Col md="3">
-            {/* <CountView /> */}
-            <div><h2><b style={{color:"#c39eff"}}>Bài viết mới</b></h2></div>
-            {/* <p style={{fontFamily:"font-family: 'Inconsolata', monospace;"}}>Bài viết mới</p> */}
+          <Col md="2">
+
+            <div><h2><b style={{ color: "#c39eff" }}>Bài viết mới</b></h2></div>
+            {listTeam.map(dt => (
+
+<PostNew data={dt} />
+
+
+))}
 
           </Col>
         </Row>
