@@ -12,7 +12,7 @@ gulp.task("licenses", async function () {
 * Paper Kit React - v1.3.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
+* Product Page: https://www.creative-tim.com/product/my-blog-frontend
 * Copyright 2021 Creative Tim (http://www.creative-tim.com)
 
 * Coded by Creative Tim
@@ -35,7 +35,7 @@ gulp.task("licenses", async function () {
 * Paper Kit React - v1.3.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
+* Product Page: https://www.creative-tim.com/product/my-blog-frontend
 * Copyright 2021 Creative Tim (http://www.creative-tim.com)
 
 * Coded by Creative Tim
@@ -58,7 +58,7 @@ gulp.task("licenses", async function () {
 * Paper Kit React - v1.3.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
+* Product Page: https://www.creative-tim.com/product/my-blog-frontend
 * Copyright 2021 Creative Tim (http://www.creative-tim.com)
 
 * Coded by Creative Tim
